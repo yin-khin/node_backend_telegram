@@ -146,7 +146,7 @@ const login = async (req, res) => {
         TOKEN_SECRET,
         {
           // expiresIn: "10m", // JWT expires after 10 minutes
-           expiresIn: "24h" ,// JWT expires after 1h
+           expiresIn: "1h" ,// JWT expires after 1h
         },
       );
 
