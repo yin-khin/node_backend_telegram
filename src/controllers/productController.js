@@ -38,7 +38,7 @@ const getAllProduct = async (req, res) => {
 
     const { search, category_id, brand_id, supplier_id, status, page, limit } =
       req.query;
-    // const products = await Product.findAll();
+    const products = await Product.findAll();
     // Build where clause for filtering
     const where = {};
 
@@ -72,7 +72,7 @@ const getAllProduct = async (req, res) => {
 
     // Pagination
     const pageNum = parseInt(page) || 1;
-    const limitNum = parseInt(limit) || 30;
+    const limitNum = parseInt(limit) || 40;
     const offset = (pageNum - 1) * limitNum;
 
     const { count, rows: product } = await Product.findAndCountAll({
