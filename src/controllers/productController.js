@@ -72,7 +72,7 @@ const getAllProduct = async (req, res) => {
 
     // Pagination
     const pageNum = parseInt(page) || 1;
-    // const limitNum = parseInt(limit) || 30;
+    const limitNum = parseInt(limit) || 30;
     const offset = (pageNum - 1) * limitNum;
 
     const { count, rows: product } = await Product.findAndCountAll({
